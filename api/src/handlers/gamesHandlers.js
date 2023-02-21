@@ -7,6 +7,7 @@ const getGamesHandler = async (req, res) =>{
     const { search } = req.query; 
     try {
         const getGames = search ? await getGamesSearchDb(search) : await concatAllGames();
+        console.log(getGames)
         res.status(200).json(getGames)
     } catch (error) {
         res.status(400).json({error: error.message})

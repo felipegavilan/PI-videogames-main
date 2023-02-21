@@ -11,7 +11,7 @@ const getGenres = async () => {
                 name: [gen.name],
             }
         })
-        return genres
+        return generes
     })
     let result = await Genre.findAll()
     return result
